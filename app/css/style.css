@@ -61,7 +61,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   /* backface-visibility: hidden; */
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .heading-main--title {
@@ -69,51 +69,83 @@ body {
   font-size: 10rem;
   font-weight: 300;
   letter-spacing: 3rem;
-  animation: dropFromTopLeft;
-  animation-duration: 1.5s;
+  animation: dropDown;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
 }
 
 .heading-main--subtitle {
-    display: block;
-    font-size: 3rem;
-    letter-spacing: 1rem;
-    font-weight: 200;
-    animation: riseFromBottomRight;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
+  display: block;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  font-weight: 200;
+  animation: riseUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
-@keyframes dropFromTopLeft {
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translate(0, -6rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+@keyframes riseUp {
+    /* beginning of the animation */
     0% {
-        opacity: 0;
-        transform: translate(-80rem, -50rem);
+      opacity: 0;
+      transform: translate(0, 6rem);
     }
-
-    80% {
-        transform: translate(0, 1rem);
-    }
-
+    /* end of the animation */
     100% {
-        opacity: 1;
-        transform: translate(0);
+      opacity: 1;
+      transform: translate(0);
     }
+  }
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
-@keyframes riseFromBottomRight {
-    0% {
-        opacity: 0;
-        transform: translate(80rem, 50rem);
-    }
-
-    80% {
-        transform: translate(0, -1rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+.btn--white::after {
+  background-color: #fff;
 }
 
+.btn:hover {
+    transform: translateY(-3px);
+    /* box shadow parameters: x-direction, y-direction, blur, color */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
 
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--animated {
+    animation: riseUp 1s ease-out;
+    animation-fill-mode: backwards;
+    /* animation-fill-mode: backwards will apply the 0% styling before it starts*/
+    /* animation shorthand: 
+      parameters:  animation-name, animation-duration, animation-timing-function, animation-delay*/
+  }
