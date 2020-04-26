@@ -41,7 +41,7 @@ body {
 .header__logo-container {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  right: 1rem;
 }
 
 .header__logo {
@@ -69,26 +69,45 @@ body {
   font-size: 10rem;
   font-weight: 300;
   letter-spacing: 3rem;
-  animation: dropFromTopRight;
-  animation-duration: 1s;
+  animation: dropFromTopLeft;
+  animation-duration: 1.5s;
   animation-timing-function: ease-out;
 }
 
 .heading-main--subtitle {
     display: block;
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 1rem;
     font-weight: 200;
+    animation: riseFromBottomRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
 }
 
-@keyframes dropFromTopRight {
+@keyframes dropFromTopLeft {
     0% {
         opacity: 0;
-        transform: translate(80rem, -50rem);
+        transform: translate(-80rem, -50rem);
     }
 
     80% {
-        transform: translate(1rem, 1rem);
+        transform: translate(0, 1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes riseFromBottomRight {
+    0% {
+        opacity: 0;
+        transform: translate(80rem, 50rem);
+    }
+
+    80% {
+        transform: translate(0, -1rem);
     }
 
     100% {
