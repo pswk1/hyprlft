@@ -1,30 +1,39 @@
-/* COLORS */
+/* COLOR PALETTE */
+/* yellow */ #F5DD03 
+/* midpoint 1 */ #D29704
+/* midpoint 2 */ #B05204
+/* dark red */ #8D0C05
 
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: 'Inconsolata', monospace;
-    font-weight: 200;
-    line-height: 1.7;
-    color: #777;
-    padding: 3rem;
-    box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+  font-weight: 200;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-    rgba(255, 173, 66, 0.8),
-    rgba(71, 6, 3, 0.8)
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(245, 221, 3, 0.8),
+      rgba(141, 12, 5, 0.8)
     ),
     url(../img/lifter.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: 50% 215%;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 90vh);
 }
