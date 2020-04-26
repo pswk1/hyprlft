@@ -1,5 +1,6 @@
 /* COLOR PALETTE */
-/* yellow */ #F5DD03 
+/* yellow */
+#F5DD03 
 /* midpoint 1 */ #D29704
 /* midpoint 2 */ #B05204
 /* dark red */ #8D0C05
@@ -15,8 +16,8 @@ html {
 }
 
 body {
-  font-family: "Inconsolata", monospace;
-  font-weight: 200;
+  font-family: "Inconsolata", sans-serif;
+  font-weight: 400;
   line-height: 1.7;
   color: #777;
   padding: 3rem;
@@ -31,9 +32,69 @@ body {
       rgba(141, 12, 5, 0.8)
     ),
     url(../img/lifter.jpg);
-    background-size: cover;
-    position: relative;
-    background-position: 50% 215%;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 90vh);
+  background-size: cover;
+  position: relative;
+  background-position: 50% 215%;
+  clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 90vh);
 }
+
+.header__logo-container {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.header__logo {
+  height: 9rem;
+}
+
+.header__text-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  /* percentages are relative to teh size of the element */
+}
+
+.heading-main {
+  color: #fff;
+  text-transform: uppercase;
+  /* backface-visibility: hidden; */
+  margin-bottom: 6rem;
+}
+
+.heading-main--title {
+  display: block;
+  font-size: 10rem;
+  font-weight: 300;
+  letter-spacing: 3rem;
+  animation: dropFromTopRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.heading-main--subtitle {
+    display: block;
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+    font-weight: 200;
+}
+
+@keyframes dropFromTopRight {
+    0% {
+        opacity: 0;
+        transform: translate(80rem, -50rem);
+    }
+
+    80% {
+        transform: translate(1rem, 1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
