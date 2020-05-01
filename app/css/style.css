@@ -1,19 +1,12 @@
 /* COLOR PALETTE */
-/* yellow */
-#F5DD03 
-/* midpoint 1 */ #D29704
-/* midpoint 2 */ #B05204
-/* dark red */ #8D0C05
-
-
-* {
+*,
+*::after,
+*::before {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 html {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
   font-family: "Inconsolata", sans-serif;
@@ -21,101 +14,72 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .header {
   height: 95vh;
   position: relative;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(245, 221, 3, 0.8),
-      rgba(141, 12, 5, 0.8)
-    ),
-    url(../img/lifter.jpg);
+  background-image: linear-gradient(to right bottom, rgba(245, 221, 3, 0.8), rgba(141, 12, 5, 0.8)), url(../img/lifter.jpg);
   background-size: cover;
-  /* background-position: 50% 215%; */
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 95vh);
-  /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
-}
-
-.header__logo-container {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-.header__logo {
-  height: 9rem;
-}
-
-.header__text-container {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  /* percentages are relative to teh size of the element */
-}
+  clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 95vh); }
+  .header__logo-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem; }
+  .header__logo {
+    height: 9rem; }
+  .header__text-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    /* percentages are relative to the size of the element */ }
 
 .heading-main {
   color: #fff;
   text-transform: uppercase;
   /* backface-visibility: hidden; */
-  margin-bottom: 4rem;
-}
-
-.heading-main--title {
-  display: block;
-  font-size: 10rem;
-  font-weight: 300;
-  letter-spacing: 3rem;
-  animation: dropDown;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-
-.heading-main--subtitle {
-  display: block;
-  font-size: 3rem;
-  letter-spacing: 1rem;
-  font-weight: 200;
-  animation: riseUp;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
+  margin-bottom: 4rem; }
+  .heading-main--title {
+    display: block;
+    font-size: 10rem;
+    font-weight: 300;
+    letter-spacing: 3rem;
+    animation: dropDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-main--subtitle {
+    display: block;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    font-weight: 200;
+    animation: riseUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
 
 @keyframes dropDown {
   0% {
     opacity: 0;
-    transform: translate(0, -6rem);
-  }
-
+    transform: translate(0, -6rem); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
-
+    transform: translate(0); } }
 
 @keyframes riseUp {
-    /* beginning of the animation */
-    0% {
-      opacity: 0;
-      transform: translate(0, 6rem);
-    }
-    /* end of the animation */
-    100% {
-      opacity: 1;
-      transform: translate(0);
-    }
-  }
+  /* beginning of the animation */
+  0% {
+    opacity: 0;
+    transform: translate(0, 6rem); }
+  /* end of the animation */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 3rem;
@@ -124,32 +88,26 @@ body {
   transition: all 0.2s;
   position: relative;
   font-size: 2rem;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
 .btn--white {
   background-color: #fff;
-  color: #777;
-}
-.btn--white::after {
-  background-color: #fff;
-}
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn:hover {
-    transform: translateY(-3px);
-    /* box shadow parameters: x-direction, y-direction, blur, color */
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  }
+  transform: translateY(-3px);
+  /* box shadow parameters: x-direction, y-direction, blur, color */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--animated {
-    animation: riseUp 1s ease-out;
-    animation-fill-mode: backwards;
-    /* animation-fill-mode: backwards will apply the 0% styling before it starts*/
-    /* animation shorthand: 
-      parameters:  animation-name, animation-duration, animation-timing-function, animation-delay*/
-  }
+  animation: riseUp 1s ease-out;
+  animation-fill-mode: backwards;
+  /* animation-fill-mode: backwards will apply the 0% styling before it starts*/
+  /* animation shorthand: 
+      parameters:  animation-name, animation-duration, animation-timing-function, animation-delay*/ }

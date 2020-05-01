@@ -1,0 +1,160 @@
+/* COLOR PALETTE */
+
+$color-yellow: #f5dd03;
+$color-mid-1: #d29704;
+$color-mid-2: #b05204;
+$color-dark-red: #8d0c05;
+
+$color-white: #fff;
+$color-grey-dark: #777;
+$color-black: #000;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inconsolata", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 95vh;
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-yellow, 0.8),
+      rgba($color-dark-red, 0.8)
+    ),
+    url(../img/lifter.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 95vh);
+
+  &__logo-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &__logo {
+    height: 9rem;
+  }
+
+  &__text-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    /* percentages are relative to the size of the element */
+  }
+}
+
+.heading-main {
+  color: $color-white;
+  text-transform: uppercase;
+  /* backface-visibility: hidden; */
+  margin-bottom: 4rem;
+
+  &--title {
+    display: block;
+    font-size: 10rem;
+    font-weight: 300;
+    letter-spacing: 3rem;
+    animation: dropDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &--subtitle {
+    display: block;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    font-weight: 200;
+    animation: riseUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translate(0, -6rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes riseUp {
+  /* beginning of the animation */
+  0% {
+    opacity: 0;
+    transform: translate(0, 6rem);
+  }
+  /* end of the animation */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    /* box shadow parameters: x-direction, y-direction, blur, color */
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--animated {
+    animation: riseUp 1s ease-out;
+    animation-fill-mode: backwards;
+    /* animation-fill-mode: backwards will apply the 0% styling before it starts*/
+    /* animation shorthand: 
+      parameters:  animation-name, animation-duration, animation-timing-function, animation-delay*/
+  }
+}
