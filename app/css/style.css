@@ -26,6 +26,7 @@ body {
 
 .header {
   height: 95vh;
+  position: relative;
   background-image: linear-gradient(
       to right bottom,
       rgba(245, 221, 3, 0.8),
@@ -33,9 +34,12 @@ body {
     ),
     url(../img/lifter.jpg);
   background-size: cover;
-  position: relative;
-  background-position: 50% 215%;
-  clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 90vh);
+  /* background-position: 50% 215%; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 95vh);
+  /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
 }
 
 .header__logo-container {
