@@ -33,3 +33,18 @@ body {
       animation-timing-function: ease-out;
     }
   }
+
+  .heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .5rem;
+
+    background-image: linear-gradient(to right, $color-yellow, $color-dark-red);
+
+    -webkit-background-clip: text;
+    color: transparent;
+
+  }
+
+  
