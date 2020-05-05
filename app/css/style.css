@@ -65,7 +65,15 @@ body {
   letter-spacing: .5rem;
   background-image: linear-gradient(to right, #f5dd03, #8d0c05);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent; }
+
+.heading-secondary--white {
+  font-size: 3.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .5rem; }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -82,6 +90,9 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
 
 .u-margin-narrow-sides {
   margin-left: 7rem;
@@ -143,6 +154,21 @@ body {
     box-shadow: 0 0 1.2rem #d29704;
     transform: translateY(-1.5rem) scale(1.08); }
 
+.facility {
+  border: 1px solid #eee; }
+  .facility__list {
+    margin: 0 auto; }
+    .facility__list ul {
+      list-style: none; }
+      .facility__list ul li {
+        padding: 1rem;
+        color: #fff;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 2; }
+        .facility__list ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+
 .header {
   height: 95vh;
   position: relative;
@@ -150,7 +176,6 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 95vh); }
   .header__logo-container {
     position: absolute;
@@ -196,3 +221,11 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+
+.section-facility {
+  height: 95vh;
+  padding-top: 10rem;
+  background-image: linear-gradient(to right bottom, rgba(245, 221, 3, 0.8), rgba(141, 12, 5, 0.8)), url(../img/awesome-lifter.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }

@@ -43,8 +43,17 @@ body {
     background-image: linear-gradient(to right, $color-yellow, $color-dark-red);
 
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 
+  }
+
+  .heading-secondary--white {
+    font-size: 3.5rem;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .5rem;
   }
 
   .heading-tertiary {
