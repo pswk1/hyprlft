@@ -75,6 +75,27 @@ body {
   font-weight: 400;
   letter-spacing: .5rem; }
 
+.heading-secondary--mid1 {
+  font-size: 3.5rem;
+  color: #d29704;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .5rem; }
+
+.heading-secondary--mid2 {
+  font-size: 3.5rem;
+  color: #b05204;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .5rem; }
+
+.heading-secondary--dark {
+  font-size: 3.5rem;
+  color: #8d0c05;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .5rem; }
+
 .heading-tertiary {
   font-size: 1.6rem;
   text-transform: uppercase; }
@@ -131,6 +152,20 @@ body {
   /* animation shorthand: 
         parameters:  animation-name, animation-duration, animation-timing-function, animation-delay*/ }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .about-scaler:hover .about-box:not(:hover) {
   transform: scale(0.9); }
 
@@ -149,6 +184,7 @@ body {
     display: inline-block;
     background-image: linear-gradient(to bottom, #f5dd03, #8d0c05);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
   .about-box:hover {
     box-shadow: 0 0 1.2rem #d29704;
@@ -170,7 +206,7 @@ body {
 .testimonial {
   width: 75%;
   margin: 0 auto;
-  box-shadow: 0 5rem 6rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1.2rem #d29704;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 1.5rem;
   padding: 6rem;
@@ -256,5 +292,5 @@ body {
   background-repeat: no-repeat; }
 
 .section-testimonials {
-  background-color: #f7f7f7;
-  padding: 15rem 0; }
+  padding: 15rem 0;
+  position: relative; }

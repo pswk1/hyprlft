@@ -26,6 +26,7 @@
 
     // Will only apply the linear gradient style to the text
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
   }
 
