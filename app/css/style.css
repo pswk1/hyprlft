@@ -105,23 +105,23 @@ body {
     text-transform: uppercase; }
 
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-margin-top-big {
-  margin-top: 8rem; }
+  margin-top: 8rem !important; }
 
 .u-margin-narrow-sides {
   margin-left: 7rem;
-  margin-right: 7rem; }
+  margin-right: 7rem !important; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -169,6 +169,40 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover; }
+
+.form {
+  padding-left: 7rem; }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: 400;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 40%;
+    display: block;
+    transition: all 0.3s; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border: 3px solid #fff; }
+    .form__input::-webkit_input-placeholder {
+      color: #777; }
+  .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s; }
+
+button:focus {
+  outline: 0; }
 
 .about-scaler:hover .about-box:not(:hover) {
   transform: scale(0.9); }
