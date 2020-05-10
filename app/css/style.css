@@ -268,6 +268,14 @@ button:focus {
     height: 100%;
     transform: translateY(2.5rem) translateX(-4rem) scale(1.4); }
 
+.footer {
+  background-color: #f7f7f7;
+  padding: 4rem 0;
+  font-size: 1.4rem;
+  color: #333; }
+  .footer__logo-box, .footer__by {
+    text-align: center; }
+
 .header {
   height: 95vh;
   position: relative;
@@ -279,7 +287,7 @@ button:focus {
   .header__logo-container {
     position: absolute;
     top: 1rem;
-    right: 1rem; }
+    left: 1rem; }
   .header__logo {
     height: 9rem; }
   .header__text-container {
