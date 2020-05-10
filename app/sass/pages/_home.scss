@@ -23,3 +23,12 @@
   padding: 15rem 0;
   position: relative;
 }
+
+.section-contact {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-yellow,
+    $color-dark-red
+  );
+}

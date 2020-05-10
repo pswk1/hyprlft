@@ -30,7 +30,7 @@ body {
     transform: translate(0); } }
 
 body {
-  font-family: "Inconsolata", sans-serif;
+  font-family: 'Inconsolata', sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
@@ -62,7 +62,7 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   background-image: linear-gradient(to right, #f5dd03, #8d0c05);
   -webkit-background-clip: text;
   background-clip: text;
@@ -73,32 +73,36 @@ body {
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: .5rem; }
+  letter-spacing: 0.5rem; }
 
 .heading-secondary--mid1 {
   font-size: 3.5rem;
   color: #d29704;
   text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: .5rem; }
+  letter-spacing: 0.5rem; }
 
 .heading-secondary--mid2 {
   font-size: 3.5rem;
   color: #b05204;
   text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: .5rem; }
+  letter-spacing: 0.5rem; }
 
 .heading-secondary--dark {
   font-size: 3.5rem;
   color: #8d0c05;
   text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: .5rem; }
+  letter-spacing: 0.5rem; }
 
 .heading-tertiary {
   font-size: 1.6rem;
   text-transform: uppercase; }
+  .heading-tertiary-white {
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase; }
 
 .u-center-text {
   text-align: center; }
@@ -119,7 +123,7 @@ body {
   margin-left: 7rem;
   margin-right: 7rem; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 3rem;
@@ -294,3 +298,7 @@ body {
 .section-testimonials {
   padding: 15rem 0;
   position: relative; }
+
+.section-contact {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #f5dd03, #8d0c05); }
