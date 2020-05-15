@@ -25,10 +25,22 @@ Using em is the best choice for media queries.
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes dropDown {
   0% {
@@ -67,6 +79,10 @@ body {
     animation: dropDown;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-main--title {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-main--subtitle {
     display: block;
     font-size: 3rem;
@@ -75,6 +91,9 @@ body {
     animation: riseUp;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-main--subtitle {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -85,6 +104,12 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
 
 .heading-secondary--white {
   font-size: 3.5rem;
@@ -92,6 +117,12 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.5rem; }
+  @media (max-width: 56.25em) {
+    .heading-secondary--white {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary--white {
+      font-size: 2.5rem; } }
 
 .heading-secondary--mid1 {
   font-size: 3.5rem;
@@ -99,6 +130,12 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.5rem; }
+  @media (max-width: 56.25em) {
+    .heading-secondary--mid1 {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary--mid1 {
+      font-size: 2.5rem; } }
 
 .heading-secondary--mid2 {
   font-size: 3.5rem;
@@ -106,6 +143,12 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.5rem; }
+  @media (max-width: 56.25em) {
+    .heading-secondary--mid2 {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary--mid2 {
+      font-size: 2.5rem; } }
 
 .heading-secondary--dark {
   font-size: 3.5rem;
@@ -113,6 +156,12 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.5rem; }
+  @media (max-width: 56.25em) {
+    .heading-secondary--dark {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary--dark {
+      font-size: 2.5rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
