@@ -1,29 +1,32 @@
 .facility {
+  // border: 1px solid $color-grey-light-2;
+  &__list {
+    margin: 0 auto;
 
-    // border: 1px solid $color-grey-light-2;
-    &__list {
-        margin: 0 auto;
-        
-        ul {
-            list-style: none;
-           
+    ul {
+      list-style: none;
 
-            li {
-                padding: 1rem;
-                color: $color-white;
-                font-size: 2rem;
-                text-align: center;
-                line-height: 2;
-                
-                &:not(:last-child) {
-                    border-bottom: 1px solid $color-grey-light-2;
-                }
-            }
+      li {
+        padding: 1rem;
+        color: $color-white;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 2;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
         }
-        
-
+      }
     }
+  }
 
+  //   @include respond(phone) {
+  //     width: 50%;
+  //     height: 100%;
+  //   }
 
+  //   @include respond(tab-port) {
+  //     width: 50%;
+  //     height: 100%;
+  //   }
 }
-
