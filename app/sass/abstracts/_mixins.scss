@@ -1,8 +1,59 @@
 @mixin clearfix {
-    &::after {
-      content: "";
-      clear: both;
-      display: table;
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0-600px: Mobile phone
+600-900px: Portrait tablet
+900-1200px: Landscape tablet
+1200-1800px: This is where our normal styles apply
+1800px+: Large desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > component
+
+Using em is the best choice for media queries.
+1em = 16px
+*/
+
+// Divide each pixel measurement by 16 to calculate width in em.
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      // 600px
+      @content;
     }
   }
-  
+
+  @if $breakpoint == tab-port {
+    // 900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    // 1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    // 1800 px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
