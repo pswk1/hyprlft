@@ -20,13 +20,13 @@ This project is a landing page created for a fictional company that offers perso
 1. Clone this repository to your machine
 
 ```
-git clone https://github.com/pswk1/avatarMatch
+git clone https://github.com/pswk1/hyprlft
 ```
 
 2. Switch to repository
 
 ```
-cd avatarMatch
+cd hyprlft
 ```
 
 3. Open index.html in browser
